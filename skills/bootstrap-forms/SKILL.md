@@ -423,3 +423,6 @@ See `references/form-reference.md` for complete form class reference.
 For form examples, see:
 
 - `examples/validation-form.html` - Form validation patterns
+- `examples/floating-labels-form.html` - Signup and login forms with floating labels
+- `examples/horizontal-form.html` - Horizontal layouts, sizing, radios, readonly display
+- `examples/inline-search-form.html` - Navbar search, filters, toolbars, newsletter forms
