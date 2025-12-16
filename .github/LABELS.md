@@ -38,7 +38,6 @@ Time estimates:
 ### Community, Dependency, and Special Labels
 
 **Community**:
-- `good first issue` - Good for newcomers
 - `help wanted` - Extra attention needed
 
 **Dependency** (Dependabot):
@@ -86,7 +85,7 @@ The `semantic-labeler.yml` workflow:
 | Priority | priority:critical/high/medium/low | Yes (one) |
 | Effort | effort:small/medium/large | Yes (one) |
 | Impact | breaking, security | If applicable |
-| Community | good first issue, help wanted | If applicable |
+| Community | help wanted | If applicable |
 
 ### Differences from Previous Labeler
 

@@ -108,7 +108,7 @@ claude --plugin-dir .
 
 ### Finding Something to Work On
 
-1. **Check existing issues**: Look for issues labeled `good first issue` or `help wanted`
+1. **Check existing issues**: Look for issues labeled `help wanted`
 2. **Review the roadmap**: See what features are planned
 3. **Fix bugs**: Found a bug? Open an issue first, then submit a PR
 4. **Improve documentation**: Documentation improvements are always welcome
