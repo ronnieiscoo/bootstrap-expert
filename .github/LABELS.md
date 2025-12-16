@@ -168,7 +168,7 @@ Labels are **automatically synced** when changes to `labels.yml` are pushed to m
 ## Label Naming Convention
 
 - **Custom labels**: Use hyphens (`-`) not underscores (`_`) for multi-word labels
-- **Default GitHub labels**: Keep spaces as-is (`good first issue`, `help wanted`) for ecosystem compatibility
+- **Default GitHub labels**: Keep spaces as-is (`help wanted`) for ecosystem compatibility
 - Use lowercase
 - Use colons (`:`) for category prefixes (`component:`, `priority:`, `status:`, `effort:`)
 - Keep names concise and descriptive
