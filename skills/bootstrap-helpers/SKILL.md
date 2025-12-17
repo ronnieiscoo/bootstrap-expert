@@ -57,9 +57,16 @@ Link colors with hover states:
 <a href="#" class="link-primary link-opacity-75">75% opacity</a>
 <a href="#" class="link-primary link-opacity-100">100% opacity</a>
 
-<!-- Underline utilities -->
-<a href="#" class="link-primary link-underline-opacity-0">No underline</a>
-<a href="#" class="link-primary link-underline-opacity-10">Light underline</a>
+<!-- Underline utilities (requires base class) -->
+<!-- .link-underline or .link-underline-{color} must be applied for opacity classes to work -->
+<a href="#" class="link-underline link-underline-opacity-50">Base underline with 50% opacity</a>
+<a href="#" class="link-underline-primary link-underline-opacity-25">Primary underline at 25%</a>
+
+<!-- Combining link color with underline opacity (requires .link-underline base) -->
+<a href="#" class="link-primary link-underline link-underline-opacity-0">No underline</a>
+<a href="#" class="link-primary link-underline link-underline-opacity-10">Light underline</a>
+
+<!-- Underline offset works directly with link colors (no base class needed) -->
 <a href="#" class="link-primary link-offset-2">Offset underline</a>
 <a href="#" class="link-primary link-offset-3">More offset</a>
 ```
