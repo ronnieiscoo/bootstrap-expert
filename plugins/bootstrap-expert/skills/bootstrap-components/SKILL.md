@@ -50,11 +50,11 @@ Hidden sidebars that slide from viewport edge. Positions: `.offcanvas-start` (le
 
 ### Popovers
 
-**Requires JS init.** Rich overlay content triggered by click or hover. Use `data-bs-toggle="popover"` with `data-bs-title` and `data-bs-content`. Initialize with `new bootstrap.Popover(el)` or batch initialize all: `document.querySelectorAll('[data-bs-toggle="popover"]').forEach(el => new bootstrap.Popover(el))`. Placements: top, right, bottom, left.
+**Requires JS init and Popper.js.** Rich overlay content triggered by click or hover. Use `data-bs-toggle="popover"` with `data-bs-title` and `data-bs-content`. Initialize with `new bootstrap.Popover(el)` or batch initialize all: `document.querySelectorAll('[data-bs-toggle="popover"]').forEach(el => new bootstrap.Popover(el))`. Placements: top, right, bottom, left. Use `bootstrap.bundle.js` (includes Popper) or include Popper separately before `bootstrap.js`.
 
 ### Scrollspy
 
-Auto-update navigation based on scroll position. Use `data-bs-spy="scroll"` on scrollable container with `data-bs-target` pointing to nav. Use `data-bs-root-margin` to control activation threshold. Container needs `tabindex="0"` for keyboard accessibility.
+Auto-update navigation based on scroll position. Use `data-bs-spy="scroll"` on scrollable container with `data-bs-target` pointing to nav. Use `data-bs-root-margin` to control activation threshold. Container needs `tabindex="0"` so keyboard-only users can focus and scroll the container without a mouse.
 
 ### Toasts
 
@@ -62,9 +62,7 @@ Auto-update navigation based on scroll position. Use `data-bs-spy="scroll"` on s
 
 ### Tooltips
 
-**Requires JS init.** Hover hints for brief descriptions. Use `data-bs-toggle="tooltip"` with `data-bs-title` (preferred) or `title` attribute. Initialize with `new bootstrap.Tooltip(el)` or batch initialize all: `document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => new bootstrap.Tooltip(el))`. Placements: top, right, bottom, left. Tooltips on disabled buttons require a wrapper `<span>` or `<div>` with `tabindex="0"` for keyboard accessibility.
-
-**Note:** Tooltips and popovers require Popper.js for positioning. Use `bootstrap.bundle.js` (includes Popper) or include Popper separately before `bootstrap.js`.
+**Requires JS init and Popper.js.** Hover hints for brief descriptions. Use `data-bs-toggle="tooltip"` with `data-bs-title` (preferred) or `title` attribute. Initialize with `new bootstrap.Tooltip(el)` or batch initialize all: `document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => new bootstrap.Tooltip(el))`. Placements: top, right, bottom, left. Tooltips on disabled buttons require a wrapper `<span>` or `<div>` with `tabindex="0"` for keyboard accessibility. Use `bootstrap.bundle.js` (includes Popper) or include Popper separately before `bootstrap.js`.
 
 ## Static Components
 

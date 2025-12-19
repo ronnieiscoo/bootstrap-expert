@@ -10,7 +10,7 @@ To create collapsible content panels that show one section at a time, use the ac
 <div class="accordion" id="accordionExample">
   <div class="accordion-item">
     <h2 class="accordion-header">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
         Accordion Item #1
       </button>
     </h2>
@@ -20,7 +20,7 @@ To create collapsible content panels that show one section at a time, use the ac
   </div>
   <div class="accordion-item">
     <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
         Accordion Item #2
       </button>
     </h2>
@@ -70,7 +70,7 @@ document.getElementById('collapseOne').addEventListener('hidden.bs.collapse', ()
 });
 ```
 
-**Accessibility:** The accordion button automatically manages `aria-expanded` state. Ensure each `accordion-collapse` has a unique `id` that matches its trigger's `data-bs-target`.
+**Accessibility:** Include `aria-expanded` (true/false) and `aria-controls` (matching the collapse panel's `id`) on each accordion button. Bootstrap manages `aria-expanded` state automatically. Ensure each `accordion-collapse` has a unique `id` that matches its trigger's `data-bs-target` and `aria-controls`.
 
 ## Carousel
 
@@ -282,6 +282,45 @@ modal.handleUpdate();  // Readjust position after dynamic height change
 document.getElementById('exampleModal').addEventListener('shown.bs.modal', () => {
   // Modal is fully visible
 });
+
+document.getElementById('exampleModal').addEventListener('hidePrevented.bs.modal', () => {
+  // Fired when backdrop is static and user clicks outside, or Escape pressed with keyboard: false
+  // Use this to provide feedback (e.g., shake animation, highlight close button)
+});
+```
+
+**Varying modal content with relatedTarget:** Reuse a single modal with different content based on which button triggered it:
+
+```html
+<button data-bs-toggle="modal" data-bs-target="#dynamicModal" data-bs-user="@alice">Edit Alice</button>
+<button data-bs-toggle="modal" data-bs-target="#dynamicModal" data-bs-user="@bob">Edit Bob</button>
+```
+
+```javascript
+const modal = document.getElementById('dynamicModal');
+modal.addEventListener('show.bs.modal', event => {
+  // Get the button that triggered the modal
+  const button = event.relatedTarget;
+  // Extract data from data-bs-* attributes
+  const user = button.getAttribute('data-bs-user');
+  // Update modal content
+  modal.querySelector('.modal-title').textContent = `Edit ${user}`;
+  modal.querySelector('#userInput').value = user;
+});
+```
+
+**Embedding YouTube videos:** YouTube iframes continue playing when modal closes. Stop playback manually:
+
+```javascript
+modal.addEventListener('hidden.bs.modal', () => {
+  const iframe = modal.querySelector('iframe');
+  if (iframe) {
+    // Reset src to stop video
+    const src = iframe.src;
+    iframe.src = '';
+    iframe.src = src;
+  }
+});
 ```
 
 **Accessibility:** Modals must have `aria-labelledby` pointing to the modal title's `id`. Include `aria-hidden="true"` initially. Bootstrap handles focus trapping automatically—focus stays within the modal until closed.
@@ -490,7 +529,7 @@ const scrollspy = new bootstrap.ScrollSpy(document.body, {
 scrollspy.refresh();
 ```
 
-**Accessibility:** The scrollspy container should have `tabindex="0"` to be keyboard-focusable. Ensure section headings have unique `id` attributes matching nav hrefs.
+**Accessibility:** The scrollspy container must have `tabindex="0"` so keyboard-only users can focus the element and scroll it using arrow keys (without `tabindex`, the container cannot receive focus and is inaccessible to keyboard users). Ensure section headings have unique `id` attributes matching nav hrefs.
 
 ## Toasts
 
@@ -619,7 +658,8 @@ const tooltip = new bootstrap.Tooltip('#myTooltip', {
   placement: 'top',
   trigger: 'hover focus',
   html: false,
-  delay: { show: 500, hide: 100 }
+  delay: { show: 500, hide: 100 },
+  container: 'body'  // Recommended for complex DOM scenarios
 });
 
 // Methods
@@ -627,6 +667,26 @@ tooltip.show();
 tooltip.hide();
 tooltip.toggle();
 tooltip.dispose();
+
+// Update tooltip content dynamically after initialization
+tooltip.setContent({ '.tooltip-inner': 'New tooltip text' });
+```
+
+**Key options:**
+
+| Option | Default | Description |
+|--------|---------|-------------|
+| `container` | `false` | Appends tooltip to specific element. Use `'body'` to avoid rendering issues in input groups, button groups, or tables. |
+| `selector` | `false` | Delegate tooltips to dynamically added elements. Example: `selector: '[data-bs-toggle="tooltip"]'` |
+| `boundary` | `'clippingParents'` | Overflow constraint for positioning. Set to `document.body` if tooltip gets clipped. |
+
+**Dynamic elements:** Use the `selector` option to handle tooltips on elements added after initialization:
+
+```javascript
+// Initialize once on a container, works for dynamically added elements
+new bootstrap.Tooltip(document.body, {
+  selector: '[data-bs-toggle="tooltip"]'
+});
 ```
 
 **Accessibility:** Tooltips are not announced to all screen readers—avoid putting essential information only in tooltips. Use tooltips for supplementary hints, not critical content. Ensure tooltips are keyboard-accessible (trigger element must be focusable).
