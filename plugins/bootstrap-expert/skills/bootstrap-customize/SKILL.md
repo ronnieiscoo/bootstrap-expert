@@ -638,6 +638,5 @@ See: [Bootstrap CSP Documentation](https://getbootstrap.com/docs/5.3/customize/o
 
 ### Example Files
 
-- `examples/color-mode-toggle.js` - Dark/light mode toggle implementation
-- `examples/custom-theme.scss` - Custom theme Sass file
-- `examples/selective-imports.scss` - Minimal Bootstrap build example
+- `examples/color-mode-toggle.html` - Complete dark/light mode toggle with system preference detection
+- `examples/custom-theme-demo.html` - Runtime CSS variable theming without Sass compilation
