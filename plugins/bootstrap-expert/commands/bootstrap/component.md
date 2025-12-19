@@ -16,24 +16,30 @@ Generate a Bootstrap 5.3 component based on the user's request.
 ## Instructions
 
 1. **Identify the component** from the arguments. Supported components include:
-   - navbar
-   - modal
-   - card
    - accordion
-   - carousel
-   - dropdown
-   - tabs / nav-tabs
-   - form
-   - table
    - alert
-   - toast
+   - badge
+   - breadcrumb
+   - button / buttons
+   - button-group
+   - card
+   - carousel
+   - collapse
+   - dropdown
+   - form
+   - list-group
+   - modal
+   - navbar
    - offcanvas
    - pagination
-   - breadcrumb
-   - button-group
-   - list-group
+   - placeholders
+   - popover
    - progress
    - spinner
+   - table
+   - tabs / nav-tabs
+   - toast
+   - tooltip
 
 2. **If no component specified or component unclear**, use the AskUserQuestion tool to ask which component the user wants to generate.
 
@@ -43,8 +49,14 @@ Generate a Bootstrap 5.3 component based on the user's request.
    - `--centered` / `--scrollable` / `--static` - For modal variants
    - `--striped` / `--hover` / `--bordered` - For table variants
    - `--with-icons` - Include Bootstrap Icons
-   - `--dismissible` - For alerts/toasts
+   - `--dismissible` - For alerts/toasts/popovers
    - `--animated` - For carousels/progress bars
+   - `--pill` - For rounded pill badges
+   - `--outline` - For outline button variants
+   - `--sm` / `--lg` - Size variants for buttons, badges, etc.
+   - `--flush` - For flush accordion style
+   - `--glow` / `--wave` - For placeholder animations
+   - `--top` / `--right` / `--bottom` / `--left` - Placement for tooltips/popovers
 
 4. **If options are not specified**, use the AskUserQuestion tool to ask about common configuration options for the specific component. Ask relevant questions based on the component type.
 
@@ -64,13 +76,20 @@ Generate a Bootstrap 5.3 component based on the user's request.
 
 ## Example Questions by Component
 
-- **navbar**: Fixed position? Dark/light theme? With search form? Logo/brand text?
-- **modal**: Size (sm/default/lg/xl/fullscreen)? Scrollable body? Centered? Static backdrop?
+- **accordion**: Flush style? Always open? With icons?
+- **alert**: Dismissible? With icon? Color variant (success/warning/danger)?
+- **badge**: Rounded pill? Color variant? As notification counter?
+- **button/buttons**: Size (sm/lg)? Variant (primary/outline)? With icon? Disabled state?
 - **card**: With image? Header/footer? Horizontal layout?
-- **form**: Floating labels? Inline layout? With validation?
-- **table**: Striped? Hoverable? Bordered? Responsive? Dark theme?
 - **carousel**: With indicators? With captions? Auto-play? Fade transition?
-- **accordion**: Flush style? Always open?
+- **collapse**: Horizontal? Multiple targets? With toggle button?
+- **form**: Floating labels? Inline layout? With validation?
+- **modal**: Size (sm/default/lg/xl/fullscreen)? Scrollable body? Centered? Static backdrop?
+- **navbar**: Fixed position? Dark/light theme? With search form? Logo/brand text?
+- **placeholders**: Animation (wave/glow)? Size? With card layout?
+- **popover**: Placement (top/right/bottom/left)? Trigger (hover/click/focus)? Dismissible?
+- **table**: Striped? Hoverable? Bordered? Responsive? Dark theme?
+- **tooltip**: Placement (top/right/bottom/left)? With HTML content?
 
 ## Output Format
 
