@@ -142,6 +142,22 @@ document.querySelectorAll('[data-bs-toggle="popover"]')
 
 Toasts also require JavaScript to show—they are hidden by default and must be shown programmatically with `toast.show()`.
 
+### Tooltip/Popover Positioning Issues
+
+If tooltips or popovers appear in the wrong position, get clipped, or behave strangely in complex layouts (input groups, button groups, tables, modals), use `container: 'body'`:
+
+```javascript
+// Append to body to avoid rendering issues
+new bootstrap.Tooltip(el, { container: 'body' });
+new bootstrap.Popover(el, { container: 'body' });
+```
+
+For popovers inside modals, set `container` to the modal body so focus remains trapped:
+
+```javascript
+new bootstrap.Popover(el, { container: '.modal-body' });
+```
+
 ### Modal Best Practices
 
 **Semantic headings**: Bootstrap recommends using `<h1>` for modal titles semantically (the modal represents its own document context). Use font size utilities like `.fs-5` to control visual appearance while maintaining proper heading hierarchy.

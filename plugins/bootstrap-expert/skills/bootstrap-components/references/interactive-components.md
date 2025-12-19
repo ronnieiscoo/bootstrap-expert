@@ -441,7 +441,33 @@ const popover = new bootstrap.Popover('#myPopover', {
 popover.show();
 popover.hide();
 popover.toggle();
-popover.dispose();  // Destroy popover
+popover.dispose();       // Destroy popover
+popover.enable();        // Re-enable a disabled popover
+popover.disable();       // Prevent popover from showing
+popover.toggleEnabled(); // Toggle enabled state
+
+// Update popover content dynamically after initialization
+popover.setContent({
+  '.popover-header': 'New title',
+  '.popover-body': 'New content'
+});
+```
+
+**Key options:**
+
+| Option | Default | Description |
+|--------|---------|-------------|
+| `container` | `false` | Appends popover to specific element. Use `'body'` to avoid rendering issues in input groups, button groups, or tables. |
+| `selector` | `false` | Delegate popovers to dynamically added elements. Example: `selector: '[data-bs-toggle="popover"]'` |
+| `boundary` | `'clippingParents'` | Overflow constraint for positioning. Set to `document.body` if popover gets clipped. |
+
+**Dynamic elements:** Use the `selector` option to handle popovers on elements added after initialization:
+
+```javascript
+// Initialize once on a container, works for dynamically added elements
+new bootstrap.Popover(document.body, {
+  selector: '[data-bs-toggle="popover"]'
+});
 ```
 
 **Accessibility:** Popovers are not ideal for essential information since they may be missed by screen readers. Use for supplementary content only. For dismissible popovers, ensure keyboard users can trigger and dismiss them.
@@ -667,6 +693,9 @@ tooltip.show();
 tooltip.hide();
 tooltip.toggle();
 tooltip.dispose();
+tooltip.enable();       // Re-enable a disabled tooltip
+tooltip.disable();      // Prevent tooltip from showing
+tooltip.toggleEnabled(); // Toggle enabled state
 
 // Update tooltip content dynamically after initialization
 tooltip.setContent({ '.tooltip-inner': 'New tooltip text' });
